@@ -1,19 +1,20 @@
+
 public class TesteContas {
 
 	public static void main(String[] args) {
+
+		ContaCorrente cc = new ContaCorrente(111, 222);
+		cc.deposita(500);
 		
-		Conta conta = new Conta(1337, 23334);
+		ContaPoupanca cp = new ContaPoupanca(333, 444);
+		cp.deposita(200);
 		
-		conta.deposita(200.0);
+		cc.transfere(100, cp);
 		
-		System.out.println(conta.getSaldo());
+		System.out.println(cc.getSaldo());
+		System.out.println(cp.getSaldo());
 		
-		conta.setAgencia(570);
-		
-		System.out.println(conta.getAgencia());
-		
-		System.out.println("o total de contas é : " + Conta.getTotal());
 		
 	}
-	
+
 }

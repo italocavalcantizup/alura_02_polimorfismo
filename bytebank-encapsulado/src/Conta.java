@@ -1,6 +1,6 @@
 
 
-public class Conta {
+public abstract class Conta {
 
     private double saldo;
     private int agencia;
@@ -10,11 +10,9 @@ public class Conta {
 
     public Conta(int agencia, int numero){
         Conta.total++;
-        System.out.println("O total de contas é " + Conta.total);
         this.agencia = agencia;
         this.numero = numero;
         this.saldo = 100;
-        System.out.println("Estou criando uma conta " + this.numero);
     }
 
     public void deposita(double valor) {
@@ -33,6 +31,7 @@ public class Conta {
     public boolean transfere(double valor, Conta destino) {
         if(this.saca(valor)) {
         		destino.deposita(valor);
+        		this.saca(valor);
         		return true;
         } else {
         		return false;
