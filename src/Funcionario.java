@@ -28,6 +28,15 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
+	@Override
+	public String toString() {
+		System.out.println("Informação do Funcionário");
+		System.out.printf("%s - CPF: %s - Salário: R$ %.2f", this.nome, this.cpf, this.salario);
+		System.out.println();
+		System.out.println("----------------");
+		return super.toString();
+	}
+	
 	
 	
 }
