@@ -1,4 +1,3 @@
-
 public class TesteContas {
 
 	public static void main(String[] args) {
@@ -13,7 +12,6 @@ public class TesteContas {
 		
 		System.out.println(cc.getSaldo());
 		System.out.println(cp.getSaldo());
-		
 		
 	}
 
